@@ -4,4 +4,7 @@
     background: $main-background;
     width: 100%;
     height: 31.7em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }

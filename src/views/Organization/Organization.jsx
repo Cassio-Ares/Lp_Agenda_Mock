@@ -5,7 +5,7 @@ import EditTask from "../../components/componentsOrganization/EditTask";
 import { useState } from "react";
 import "./index.scss";
 
-const Organization = ({ data }) => {
+const Organization = ({ data, setDataTask }) => {
   const [dataTask, setDataTask] = useState([...data]);
  // console.log(dataTask)
 

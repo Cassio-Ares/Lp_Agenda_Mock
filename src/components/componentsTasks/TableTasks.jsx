@@ -3,10 +3,13 @@ import { FaTrash, FaPen } from "react-icons/fa6";
 import CardAdd from "../Cards/CardAdd";
 import CardDel from "../Cards/CardDel";
 import { useState } from "react";
+import CardDescription from "../Cards/CardDescription";
 
 const TableTasks = ({ dataTask = [], removeTask }) => {
   const [del, setDel] = useState(false);
   const [edit, setEdit] = useState(false);
+
+  const [show, setShow] = useState(false);
 
   // States para negar
   function delet() {
@@ -23,6 +26,16 @@ const TableTasks = ({ dataTask = [], removeTask }) => {
     removeTask(data);
   };
 
+  //mostrar card
+  function appear() {
+    setShow(true);
+  }
+
+  //sumir card
+  function disappear() {
+    //setShow(false);
+  }
+
   return (
     <div className="table">
       <table>
@@ -37,10 +50,24 @@ const TableTasks = ({ dataTask = [], removeTask }) => {
           {dataTask.map((dataTask, id) => {
             return (
               <tr key={id}>
-                <td className="table_pg">{dataTask.title}</td>
-                <td>
-                  <input type="checkbox" />
+                <td
+                  onClick={appear}
+                  onMouseOut={disappear}
+                  className="table_pg"
+                >
+                  {dataTask.title}
+
+                  {show === true && (
+                  <CardDescription dataTask={dataTask} />
+                 )}
                 </td>
+
+                <td className="td_checkbox">
+                  <input className="checkbox" type="checkbox" />
+                  <label className="checkbox_Label" htmlFor="checkbox">
+                  </label>
+                </td>
+
                 <td className="icons">
                   <FaPen onClick={edite} />
                   {edit === true && <CardAdd onclickNo={edite} />}

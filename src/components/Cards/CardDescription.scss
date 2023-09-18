@@ -1,41 +1,48 @@
 @use "../../Sass/variables" as *;
 
-.card_editTask{
+.containerCard{
     background-color:$card-background;
-    width: 20em;
-    height: 20em;
+    max-width: 25em;
     margin-left: 3rem;
-    padding-left: 2.5rem;
+    padding-left: 1rem;
     border-radius: .5em;
+    position:absolute;
+    margin-top: 100px;
+    top: 0;
     
     h1{
         color: #000;
-        margin-left: 0em;
-        margin-bottom: 0.5em;
+        margin-bottom: .5em;
     }
 
-    
-    label{
+    p,
+    span{
         color: #000;
-    }
+        margin-bottom: .5em;
 
-       
-
-    .time_date{
-        display: flex;
-        column-gap: 1.6em;
-
-        input{
-            height: 2em;
-            
+        
+        strong{
+            color: #000;
         }
     }
-   
+
+    span{
+
+        padding: 1em 1em;
+        
+    }
+
+    .date{
+      color: #000;
+    }
 
     .container-btn {
         display: flex;
         margin-top: 1em;
-    }
+        padding-bottom: 3em;
+        
+        
+      }
     
       .btnCard_sim {
         background-color: $btn-yes-background;
@@ -53,7 +60,7 @@
         width: 09em;
         height: 3em;
         border-radius: 0.6em;
-        margin-left: -1em;
+        margin-left: 1.5em;
         font-weight: bold;
         border: none;
       }
@@ -62,5 +69,4 @@
       .btnCard_nao:hover {
         box-shadow: 05px 05px #000;
       }
-
 }
