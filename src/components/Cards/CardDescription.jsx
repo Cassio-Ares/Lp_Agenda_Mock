@@ -2,12 +2,8 @@ import "./CardDescription.scss";
 import Button from "../Button";
 
 const CardDescription = ({ dataTask }) => {
-  console.log(dataTask);
- /*localização para ajudar na ajuda, este é o card que quero que apareça com a descrição dos dados
+  /*localização para ajudar na ajuda, este é o card que quero que apareça com a descrição dos dados
  os dados chegam até aqui porem ao clicar ele mostra sempre o mesmo card */
-
-
-
 
   return (
     <div className="containerCard">
